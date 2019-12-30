@@ -1,12 +1,18 @@
 <h1>Snack Show Page</h1>
 
 <section id="show_that_snack-<%= @snack.id %>">
-  Name: <%= @snack.name %>
-  Price: <%= @snack.price %>
-  Locations:
-    <%= @snack.machines.each do |machine| %> 
+  <p>
+    <strong>Name:</strong> <%= @snack.name %>
+  </p>
+  <p>
+    <strong>Price</strong>: <%= @snack.price %>
+  </p>
+  <p>
+    <strong>Locations:</strong>
+  </p>
+    <% @snack.machines.each do |machine| %> 
       <section id="snack-per-machine-<%= machine.id %>">
-        <%= machine.location %>
+        *<%= machine.location %>
         <%= machine.kind_of_snack_count %> kinds of snacks,
         average price of: <%= number_to_currency( machine.average_snack_cost ) %>
       </section>
