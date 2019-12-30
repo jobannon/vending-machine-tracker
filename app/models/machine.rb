@@ -9,4 +9,9 @@ class Machine < ApplicationRecord
   def average_snack_cost 
     self.snacks.average(:price)
   end
+
+  def kind_of_snack_count
+    snacks.select(:kind).count
+  end
+  
 end

@@ -27,7 +27,6 @@ RSpec.describe "as a visitor" do
       visit machine_path(@vending_1)
 
        within "#machine_stats" do 
-         save_and_open_page 
          expect(page).to have_content("$75") 
        end 
     end 
