@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   root to: "owners#index"
 
-  resources :owners do
+  resources :owners, only: [:index] do 
     resources :machines, only: [:index]
   end
 
