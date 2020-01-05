@@ -37,7 +37,6 @@ RSpec.describe "as a visitor" do
           expect(page).to have_content("basement")
           expect(page).to have_content("3 kinds")
         end
-        save_and_open_page
       end
 
     end
